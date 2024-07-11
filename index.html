@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Container Loading Qty Calculator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="container">
+    <h1>CONTAINER LOADING QTY CALCULATOR</h1>
+    <hr />
+    <form id="containerForm">
+      <table id="detailsTable" align="center">
+        <tr>
+          <th>Type of Container</th>
+          <th colspan="3">Carton measurements</th>
+        </tr>
+        <tr>
+          <td rowspan="6"><label for="containerType"><u>Select the container:</u><br> &dArr;</label>
+            <br>
+            <select id="containerType" name="containerType">
+              <option value="20">20ft Standed container</option>
+              <option value="40">40ft Standerd container</option>
+              <option value="20hq">20ft High Cube Container</option>
+              <option value="40hq">40ft High Cube Container</option>
+              <option value="46">45ft High Cube Container</option>
+            </select>
+          </td>
+          <td><label for="cartonLength">Carton Length (mm):</label></td>
+          <td><label for="cartonWidth">Carton Width (mm):</label> </td>
+          <td><label for="cartonHeight">Carton Height (mm):</label> </td>
+        </tr>
+        <tr>
+          <td><input type="number" id="cartonLength" name="cartonLength" /></td>
+          <td><input type="number" id="cartonWidth" name="cartonWidth" /></td>
+          <td><input type="number" id="cartonHeight" name="cartonHeight" /></td>
+        </tr>
+        <tr>
+          <td id="consl" colspan="3"><b>If the carton bulging than the actul measurements</b></td>
+        </tr>
+        <tr>
+          <td><label for="bulgingLength"> Add extra Length <br> if bulging <br>(mm):</label></td>
+          <td><label for="bulgingWidth"> Add extra Width <br> if bulging <br>(mm):</label></td>
+          <td><label for="bulgingHeight"> Add extra Height <br> if bulging <br>(mm):</label></td>
+        </tr>
+        <tr>
+          <td><input type="number" id="bulgingLength" name="bulgingLength" value="0" min="0" /></td>
+          <td><input type="number" id="bulgingWidth" name="bulgingWidth" value="12" min="0" /></td>
+          <td><input type="number" id="bulgingHeight" name="bulgingHeight" value="3" min="0" /></td>
+        </tr>
+      </table>
+      <br>
+      <button type="button" onclick="getContainerDetails()">Submit</button>
+      <button type="button" onclick="clearData()">Clear Data</button>
+    </form>
+    <div id="containerDetails"></div>
+
+    <div id="containerDetails">
+      <table id="detailsTable">
+        <tr>
+          <th>Container Type</th>
+          <th>Internal Dimensions (mm)</th>
+          <th>Volume (CBM)</th>
+          <th>Max Load (KGS)</th>
+        </tr>
+        <tr>
+          <td>20ft Standard</td>
+          <td>L: 5898, W: 2352, H: 2393</td>
+          <td id="cmb20ft">33.2</td>
+          <td>21,770</td>
+        </tr>
+        <tr>
+          <td>40ft Standard</td>
+          <td>L: 12032, W: 2352, H: 2393</td>
+          <td id="cmb40ft">67.7</td>
+          <td>26,780</td>
+        </tr>
+        <tr>
+          <td>20ft High Cube</td>
+          <td>L: 5898, W: 2352, H: 2690</td>
+          <td id="cmb20fthq">37.0</td>
+          <td>28,165</td>
+        </tr>
+        <tr>
+          <td>40ft High Cube</td>
+          <td>L: 12032, W: 2352, H: 2698</td>
+          <td id="cmb40fthq">76.4</td>
+          <td>30,480</td>
+        </tr>
+        <tr>
+          <td>45ft High Cube</td>
+          <td>L: 13544, W: 2352, H: 2698</td>
+          <td id="cmb45fthq">86.0</td>
+          <td>32,500</td>
+        </tr>
+      </table>
+    </div>
+    <br>
+    <hr>
+    <footer id="footer"> Created by Samantha 2024 &#169<br>
+      <p> <a href="mailto:s2880882@gmail.com"> s2880882@gmail.com</a> </p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

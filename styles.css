@@ -1,0 +1,99 @@
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    th {
+      background-color: rgb(142, 240, 212);
+      border-style: solid;
+      border-width: 1px;
+    }
+
+    #consl {
+      background-color: rgb(142, 240, 212);
+    }
+
+    td {
+      background-color: white;
+      border-style: solid;
+      border-width: 1px;
+      text-decoration-color: black;
+      text-decoration-thickness: 3px;
+    }
+
+    label {
+      text-align: center;
+    }
+
+    #container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: hsl(80, 13%, 95%);
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      text-align: center;
+    }
+
+    button {
+      padding: 10px 20px;
+      cursor: pointer;
+      margin: 5px;
+      padding: 10px 20px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    button:hover {
+      background-color: hsl(278, 40%, 45%);
+    }
+
+    #containerDetails {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+
+    #footer {
+      text-align: center;
+      margin-top: 20px;
+      padding: 10px;
+      background-color: hsl(80, 13%, 95%);
+      border-top: 1px solid #ccc;
+    }
+
+    #detailsTable {
+      margin-top: 20px;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    #detailsTable th,
+    #detailsTable td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    #detailsTable th {
+      background-color: rgb(142, 240, 212);
+    }
+
+    #detailsTable td {
+      background-color: white;
+    }
